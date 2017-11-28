@@ -21,7 +21,7 @@ $content_body_left_offset: $sidebar_width + $content_body_margin;
 $header_height: 26px;
 $breadcrumb_padding_top: 17px;
 
-$code_font: 0.95em Menlo, monospace;
+$code_font: 'SF Mono', Menlo, monospace;
 
 $gray_border: 1px solid #e2e2e2;
 $declaration_language_border: 5px solid #cde9f4;
@@ -50,8 +50,9 @@ html, body, div, span, h1, h3, h4, p, a, code, em, img, ul, li, table, tbody, tr
 
 body {
   background-color: $light_gray_bg_color;
-  font-family: Helvetica, freesans, Arial, sans-serif;
-  font-size: 14px;
+  font-family: -apple-system, Helvetica, freesans, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
 }
@@ -61,7 +62,7 @@ body {
 h1, h2, h3 {
   margin-top: 0.8em;
   margin-bottom: 0.3em;
-  font-weight: 100;
+  font-weight: 400;
   color: black;
 }
 h1 {
@@ -86,16 +87,15 @@ h6 {
 .section-name {
   color: rgba(128,128,128,1);
   display: block;
-  font-family: Helvetica;
   font-size: 22px;
-  font-weight: 100;
   margin-bottom: 15px;
 }
 
 // Code
 
 pre, code {
-  font: $code_font;
+  font-family: $code_font;
+  font-size: 0.95em;
   color: $code_color;
   word-wrap: normal;
 }
@@ -210,7 +210,6 @@ header {
 .nav-group-name {
   border-bottom: $gray_border;
   font-size: 1.1em;
-  font-weight: 100;
   padding: 15px 0 15px 20px;
   > a {
     color: #333;
@@ -247,7 +246,7 @@ header {
     margin-bottom: 1em;
   }
   p {
-    line-height: 1.8em;
+    line-height: 1.5;
   }
   section {
     .section:first-child {
@@ -336,7 +335,6 @@ header {
   .token {
     padding-left: 3px;
     margin-left: 15px;
-    font-size: 11.9px;
   }
   .declaration-note {
     font-size: .85em;
@@ -392,7 +390,8 @@ header {
   border-left: $aside_border;
   overflow-y: hidden;
   .aside-title {
-    font-size: 9px;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding-bottom: 0;
