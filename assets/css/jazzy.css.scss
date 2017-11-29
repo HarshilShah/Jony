@@ -2,7 +2,7 @@
 // Constants
 ////////////////////////////////
 
-$bg_color: #414141;
+$bg_color: #2C2C2C;
 $doc_coverage_color: #999;
 $code_color: #777;
 $code_bg_color: #eee;
@@ -15,11 +15,11 @@ $declaration_title_language_color: #4b8afb;
 
 $sidebar_width: 230px;
 $content_wrapper_width: 980px;
-$content_top_offset: 70px;
+$content_top_offset: 87px;
 $content_body_margin: 16px;
 $content_body_left_offset: $sidebar_width + $content_body_margin;
-$header_height: 26px;
-$breadcrumb_padding_top: 17px;
+$header_height: 48px;
+$breadcrumb_padding: 10px;
 
 $code_font: 'SF Mono', Menlo, monospace;
 
@@ -147,12 +147,12 @@ blockquote {
 ////////////////////////////////
 
 header {
-  font-size: 0.85em;
+  // font-size: 0.85em;
   line-height: $header_height;
   background-color: $bg_color;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   img {
     padding-right: 6px;
     vertical-align: -4px;
@@ -171,17 +171,25 @@ header {
   }
 }
 
-#breadcrumbs {
-  background-color: $light_gray_bg_color;
-  height: $content_top_offset - $header_height - $breadcrumb_padding_top;
-  padding-top: $breadcrumb_padding_top;
+#breadcrumbs-container {
+  background-color: $bg_color;
   position: fixed;
-  width: 100%;
   z-index: 1;
+  width: 100%;
+}
+
+#breadcrumbs {
+  color: rgba(255, 255, 255, 0.6);
+  height: $content_top_offset - $header_height - $breadcrumb_padding;
+  padding-bottom: $breadcrumb_padding;
+  width: 100%;
   margin-top: $header_height;
   #carat {
     height: 10px;
     margin: 0 5px;
+  }
+  a {
+    color: white;
   }
 }
 
