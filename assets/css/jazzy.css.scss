@@ -8,7 +8,8 @@ $code_color: #777;
 $code_bg_color: #eee;
 $link_color: #0088cc;
 $white_color: #fff;
-$light_gray_bg_color: #f2f2f2;
+$light_gray_bg_color: #fafafa;
+$normal_gray_bg_color: #f2f2f2;
 $declaration_bg_color: #f9f9f9;
 $declaration_title_language_color: #4b8afb;
 
@@ -47,7 +48,7 @@ html, body, div, span, h1, h3, h4, p, a, code, em, img, ul, li, table, tbody, tr
 ////////////////////////////////
 
 body {
-  background-color: $light_gray_bg_color;
+  background-color: $white_color;
   font-family: -apple-system, Helvetica, freesans, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -141,16 +142,33 @@ blockquote {
   max-width: $content_wrapper_max_width;
 }
 
+
+////////////////////////////////
+// Content Wrappers
+////////////////////////////////
+
 .wrapper {
   overflow: auto;
 }
 
 .article-wrapper  > *,
-.nav-wrapper  > *, 
+.nav-wrapper  > *,
 .footer-wrapper > * {
   margin: 0 auto;
   width: $content_wrapper_width;
   max-width: $content_wrapper_max_width;
+}
+
+.article-wrapper {
+  background-color: $white_color;
+}
+
+.nav-wrapper {
+  background-color: $light_gray_bg_color;
+}
+
+.footer-wrapper {
+  background-color: $normal_gray_bg_color;
 }
 
 ////////////////////////////////
@@ -216,7 +234,6 @@ header {
 
 .nav-groups {
   list-style-type: none;
-  background: $white_color;
   padding-left: 0;
 }
 
@@ -247,8 +264,6 @@ header {
 ////////////////////////////////
 
 .main-content {
-  background-color: $white_color;
-  border: $gray_border;
   overflow: hidden;
   padding-bottom: 60px;
   margin-top: $content_top_offset;
@@ -455,7 +470,9 @@ header {
 }
 
 #footer {
-  margin: 25px;
+  padding: 25px;
+  box-sizing: border-box;
+
   p {
     margin: 0;
     color: #aaa;
