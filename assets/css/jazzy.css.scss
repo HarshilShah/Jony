@@ -12,6 +12,7 @@ $light_gray_bg_color: #f2f2f2;
 $declaration_bg_color: #f9f9f9;
 $declaration_title_language_color: #4b8afb;
 
+$mobile_breakpoint: 767px;
 $content_wrapper_width: calc(100% - 32px);
 $content_wrapper_max_width: 980px;
 $content_top_offset: 87px;
@@ -188,6 +189,12 @@ header {
     margin: 0 5px;
   }
   a {
+    color: white;
+  }
+}
+
+@media screen and (max-width: $mobile_breakpoint) {
+  #breadcrumbs {
     color: white;
   }
 }
@@ -480,7 +487,7 @@ html.dash {
 // Responsive design
 ////////////////////////////////
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: $mobile_breakpoint) {
   .no-mobile {
     display: none;
   }
