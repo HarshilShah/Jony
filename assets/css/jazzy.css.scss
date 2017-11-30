@@ -13,9 +13,11 @@ $normal_gray_bg_color: #f2f2f2;
 $declaration_bg_color: #f9f9f9;
 $declaration_title_language_color: #4b8afb;
 
-$mobile_breakpoint: 767px;
 $content_wrapper_width: calc(100% - 32px);
 $content_wrapper_max_width: 980px;
+$article_max_width: 750px;
+
+$mobile_breakpoint: 767px;
 $content_top_offset: 87px;
 $header_height: 48px;
 $breadcrumb_padding: 10px;
@@ -82,12 +84,6 @@ h5 {
 h6 {
   font-size: 1.1em;
   color: $code_color;
-}
-.section-name {
-  color: rgba(128,128,128,1);
-  display: block;
-  font-size: 22px;
-  margin-bottom: 15px;
 }
 
 // Code
@@ -285,6 +281,8 @@ header {
     line-height: 1.5;
   }
   section {
+    max-width: $article_max_width;
+
     .section:first-child {
       margin-top: 0;
       padding-top: 0;
@@ -307,10 +305,6 @@ header {
   }
 }
 
-.section {
-  padding: 0 25px;
-}
-
 .highlight {
   background-color: $code_bg_color;
   padding: 10px 12px;
@@ -328,17 +322,20 @@ header {
 }
 
 .section-name {
+  font-size: 1.5rem;
+  font-weight: 500;
   margin: 0;
-  margin-left: 18px;
 }
 
 .task-group-section {
-  padding-left: 6px;
   border-top: $gray_border;
 }
 
 .task-group {
   padding-top: 0px;
+  > ul {
+    padding-left: 0;
+  }
 }
 
 .task-name-container {
@@ -370,7 +367,7 @@ header {
   }
   .token {
     padding-left: 3px;
-    margin-left: 15px;
+    margin-left: 35px;
   }
   .declaration-note {
     font-size: .85em;
@@ -404,19 +401,16 @@ header {
 
 .height-container {
   display: none;
-  left: -25px;
-  padding: 0 25px;
   position: relative;
   width: 100%;
   overflow: hidden;
   .section {
-    background: $declaration_bg_color;
-    border-bottom: $gray_border;
-    left: -25px;
     position: relative;
+    background: $declaration_bg_color;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding: 10px 25px;
+    border: $gray_border;
+    box-sizing: border-box;
   }
 }
 
@@ -481,7 +475,7 @@ header {
 }
 
 #footer {
-  padding: 25px;
+  padding: 25px 0;
   box-sizing: border-box;
 
   p {
