@@ -229,7 +229,7 @@ header {
 }
 
 ////////////////////////////////
-// Side Navigation
+// Navigation
 ////////////////////////////////
 
 .nav-groups {
@@ -238,24 +238,35 @@ header {
 }
 
 .nav-group-name {
-  border-bottom: $gray_border;
-  font-size: 1.1em;
-  padding: 15px 0 15px 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px 0;
+  &:not(:last-child) {
+    border-bottom: $gray_border;
+  }
   > a {
     color: #333;
   }
 }
 
 .nav-group-tasks {
+  column-count: 2;
+  list-style: none;
+  padding: 0;
   margin-top: 5px;
 }
 
 .nav-group-task {
-  font-size: 0.9em;
-  list-style-type: none;
-  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 400;
   a {
     color: #888;
+  }
+}
+
+@media screen and (max-width: $mobile_breakpoint) {
+  .nav-group-tasks {
+    column-count: 1;
   }
 }
 
