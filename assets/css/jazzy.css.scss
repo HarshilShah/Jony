@@ -12,7 +12,8 @@ $light_gray_bg_color: #f2f2f2;
 $declaration_bg_color: #f9f9f9;
 $declaration_title_language_color: #4b8afb;
 
-$content_wrapper_width: 980px;
+$content_wrapper_width: calc(100% - 32px);
+$content_wrapper_max_width: 980px;
 $content_top_offset: 87px;
 $header_height: 48px;
 $breadcrumb_padding: 10px;
@@ -136,6 +137,7 @@ blockquote {
 .content-wrapper {
   margin: 0 auto;
   width: $content_wrapper_width;
+  max-width: $content_wrapper_max_width;
   overflow: auto;
 }
 
@@ -453,6 +455,7 @@ html.dash {
   }
   .main-content {
     width: $content_wrapper_width;
+    max-width: $content_wrapper_max_width;
     margin-left: 0;
     border: none;
     width: 100%;
