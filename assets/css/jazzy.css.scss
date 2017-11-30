@@ -139,7 +139,18 @@ blockquote {
   margin: 0 auto;
   width: $content_wrapper_width;
   max-width: $content_wrapper_max_width;
+}
+
+.wrapper {
   overflow: auto;
+}
+
+.article-wrapper  > *,
+.nav-wrapper  > *, 
+.footer-wrapper > * {
+  margin: 0 auto;
+  width: $content_wrapper_width;
+  max-width: $content_wrapper_max_width;
 }
 
 ////////////////////////////////

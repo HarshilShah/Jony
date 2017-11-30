@@ -26,25 +26,31 @@
         </p>
       </div>
     </div>
-    <div class="content-wrapper">
-      <article class="main-content">
-        <section>
-          <section class="section">
-            {{^hide_name}}<h1>{{name}}</h1>{{/hide_name}}
-            {{#declaration}}
-              <div class="declaration">
-                <div class="language">
-                  {{{declaration}}}
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              {{^hide_name}}<h1>{{name}}</h1>{{/hide_name}}
+              {{#declaration}}
+                <div class="declaration">
+                  <div class="language">
+                    {{{declaration}}}
+                  </div>
                 </div>
-              </div>
-            {{/declaration}}
-            {{{overview}}}
+              {{/declaration}}
+              {{{overview}}}
+            </section>
+            {{> tasks}}
           </section>
-          {{> tasks}}
-        </section>
-      </article>
-      {{> nav}}
-      {{> footer}}
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        {{> nav}}
+      </div>
+      <div class="footer-wrapper">
+        {{> footer}}
+      </div>
     </div>
   </body>
 </div>
