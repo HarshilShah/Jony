@@ -56,6 +56,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: subpixel-antialiased;
   word-wrap: break-word;
+  min-height: 100vh;
 }
 
 // Headers
@@ -144,6 +145,9 @@ blockquote {
 ////////////////////////////////
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
   overflow: auto;
 }
 
@@ -156,6 +160,7 @@ blockquote {
 }
 
 .article-wrapper {
+  flex: 1;
   background-color: $white_color;
 }
 
