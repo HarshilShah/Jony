@@ -204,6 +204,8 @@ header {
   padding-bottom: $breadcrumb_padding;
   width: 100%;
   margin-top: $header_height;
+  white-space: nowrap;
+  overflow-x: scroll;
   #carat {
     height: 10px;
     margin: 0 5px;
