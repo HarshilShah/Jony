@@ -86,6 +86,11 @@ h6 {
   color: $code_color;
 }
 
+@media screen and (max-width: $mobile_breakpoint) {
+  h1 { font-size: 1.75em; }
+  h2 { font-size: 1.4em; }
+}
+
 // Code
 
 pre, code {
