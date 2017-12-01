@@ -94,11 +94,6 @@ pre, code {
   color: $code_color;
   word-wrap: normal;
 }
-p code, li code {
-  background-color: $code_bg_color;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
 
 // Links
 
@@ -377,7 +372,6 @@ header {
 }
 
 .pointer-container {
-  border-bottom: $gray_border;
   left: -23px;
   padding-bottom: 13px;
   position: relative;
@@ -410,6 +404,7 @@ header {
     width: 100%;
     padding: 10px 25px;
     border: $gray_border;
+    border-radius: 8px;
     box-sizing: border-box;
   }
 }
